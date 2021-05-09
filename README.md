@@ -4,11 +4,17 @@ Various lists in plain text format from CrytoScamDB to be used with services suc
 
 All data taken from CryptoScamDB: https://cryptoscamdb.org/
 
-## List Descriptions
+## The Lists
 
-cryptoscamdb-blocklist.txt: https://api.cryptoscamdb.org/v1/blacklist - Returns a list of blacklisted domains.
+Blocklist: https://gitlab.com/KevinThomas0/cryptoscamdb-lists/-/raw/master/cryptoscamdb-blocklist.txt
 
-cryptoscamdb-allowlist.txt: https://api.cryptoscamdb.org/v1/whitelist - Returns a list of whitelisted domains.
+Allowlist: https://gitlab.com/KevinThomas0/cryptoscamdb-lists/-/raw/master/cryptoscamdb-allowlist.txt
+
+## List Descriptions (from CryptoScamDB)
+
+cryptoscamdb-blocklist.txt: - Returns a list of blacklisted domains (https://api.cryptoscamdb.org/v1/blacklist)
+
+cryptoscamdb-allowlist.txt: - Returns a list of whitelisted domains (https://api.cryptoscamdb.org/v1/whitelist)
 
 ## Notes
 
