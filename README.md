@@ -25,7 +25,7 @@ cryptoscamdb-allowlist.txt: - Returns a list of whitelisted domains (https://api
 
 Lists are updated periodically using the following commands:
 
-`curl --location --request GET 'https://api.cryptoscamdb.org/v1/blacklist' | jq -r '.result[]' > cryptoscamdb-blocklist.txt && remove-top-domains.sh`
+`curl --location --request GET 'https://api.cryptoscamdb.org/v1/blacklist' | jq -r '.result[]' > cryptoscamdb-blocklist.txt && ./remove-top-domains.sh`
 
 `curl --location --request GET 'https://api.cryptoscamdb.org/v1/whitelist' | jq -r '.result[]' > cryptoscamdb-allowlist.txt`
 
