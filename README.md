@@ -6,8 +6,9 @@ All data taken from CryptoScamDB: https://cryptoscamdb.org/
 
 There are some false positives that are removed (for example, twitter.com
 is in the API response because people have reported specific twitter accounts, but we
-obviously don't want that in the list). To get around this, I have removed all domains
-found in the top 500 domains list using `remove-top-domains.sh`.
+obviously don't want that in the list). To get around this, I have created `potential-false-positives.txt`
+which contains the top 500 most popular domains and any other potential false positives. `remove-false-positives.sh`
+will remove any domain from this list from the blocklist.
 
 ## The Lists
 
@@ -25,7 +26,7 @@ cryptoscamdb-allowlist.txt: - Returns a list of whitelisted domains (https://api
 
 Lists are updated periodically using the following commands:
 
-`curl --location --request GET 'https://api.cryptoscamdb.org/v1/blacklist' | jq -r '.result[]' > cryptoscamdb-blocklist.txt && ./remove-top-domains.sh`
+`curl --location --request GET 'https://api.cryptoscamdb.org/v1/blacklist' | jq -r '.result[]' > cryptoscamdb-blocklist.txt && ./remove-false-positives.sh`
 
 `curl --location --request GET 'https://api.cryptoscamdb.org/v1/whitelist' | jq -r '.result[]' > cryptoscamdb-allowlist.txt`
 
