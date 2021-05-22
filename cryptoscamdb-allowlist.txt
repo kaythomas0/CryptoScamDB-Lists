@@ -86,3 +86,4 @@ cryptoscamdb.org
 coindash.io
 csdb.link
 etherplan.com
+1inch.exchange
